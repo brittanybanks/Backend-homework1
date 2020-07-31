@@ -1,1 +1,1 @@
-module.exports = 'Welcome to the Nodejs Development Group!';
+module.exports = 'Welcome to the Nodejs Development Group! Please provide your information to set up your profile then choose your subscription level. ';
