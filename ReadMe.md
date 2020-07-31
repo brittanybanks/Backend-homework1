@@ -39,6 +39,8 @@ Validate user password is saved to text file
 * Commit to `GitHub` at least five times 
 * Submit `.js` file and `Github` link to Google classroom
 
+![](videos/Nodejs_userInput.gif) 
 
+ 
 
 

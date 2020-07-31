@@ -3,15 +3,13 @@ var fs = require('fs');
 //Module Wrapper Function that required (exports, require, module, _filename)
 const greeting = require('./greetings');
 
-//Display greeting 
+//Display the string value of the greeting variable from the greeting file
 console.log(greeting); 
 
-//Declare first variable as inquirer1 and the inquirer module
+//Declare variable as inquirer and require the installation of the inquirer module
 var inquirer = require("inquirer");
-//Declare a second inquirer variable to ask the user additional questions
 
-
-//While in the inquirer module the user is prompted for inputs (username, password and to confirm password)
+//While in the inquirer module the user is prompted for inputs and to select a response from a list of options
 inquirer
   .prompt([
     {
@@ -91,15 +89,15 @@ inquirer
   //After the user inputs a function is required to run with response as the parameter 
     .then(function(userQuestions) {
   
-  //If the user passwords match, then a success log will display and a text file named userPassword will be created and the user's password will be stored in this file
+  //If the user passwords match, then a success log will display 
     if (userQuestions.confirm === userQuestions.password) {
-      console.log("Thanks for signing up!");
+      console.log("Thanks for signing up! A confirmation email has been sent to the email address you provided.");
     }
   //If the user passwords do not match, then an error log will display 
     else {
       console.log("You forgot your password already? Please retry.");
     }
-  
+  //After the user confirms the password a text file named userPassword will be created and the user's password will be stored in this file
     fs.writeFile('userPassword.txt', JSON.stringify(userQuestions.password), function(err){
    }
     
