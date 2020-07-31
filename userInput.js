@@ -63,7 +63,28 @@ inquirer
     type: "input",
     message: "What is the name of your employer?",
     name: "employer"
+    },
+    {
+      type: "list",
+      message: "What is your preferred method of communication?",
+      name: "contact",
+      choices: [
+        "email",
+        "phone",
+        "SMS (data rates may apply)"
+      ]
+    },
+    {
+      type: "list",
+      message: "Please select a subscription level:",
+      name: "level",
+      choices: [
+        "Free Forever",
+        "Pro",
+        "Enterprise"
+      ]
     }
+
 
   ])
 
